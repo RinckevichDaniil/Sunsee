@@ -31,6 +31,7 @@
         flex-direction: row;
         align-items: center;
         .header__select {
+            background-color: transparent;
             margin-right: 25px;
             width: 44px;
             height: 32px;
@@ -41,12 +42,24 @@
                     text-decoration: none;
                 }
         }
+        .login-open {
+            background: none;
+            border: none;
+        }
         .header__login_mobile {
             display: block;
             margin-right: 40px;
             @include mobile {
                 display: none
             };
+            .login-open--mobile {
+                background-image: url('/src/images/login.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 14px;
+                height: 15px;
+            }
         }
         .header__login_display {
             display: none;

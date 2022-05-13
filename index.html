@@ -1,178 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <link rel="stylesheet" href="/src/main.scss">
-    <link rel="stylesheet" href="/src/shop-section.scss">
-    <link rel="stylesheet" href="/src/about.scss">
-</head>
-<body>
+    <link rel="stylesheet" href="/src/main.scss" />
+    <link rel="stylesheet" href="/src/shop-section.scss" />
+    <link rel="stylesheet" href="/src/about.scss" />
+  </head>
+  <body>
     <div class="wrapp">
-        <div class="wrapper">
-            <div class="main_wrapper">
-                <header class="header">
-                    <a href="#" class="header__logo">
-                        SUNSEE
-                    </a>
-                    <div class="header__menu">
-                        <select name="language select" id="select_language" class="header__select">
-                            <option value="en" class="select_item">EN</option>
-                        </select>
-                        <div class="header__login_mobile">
-                            <a href="/personal_info.html">
-                                <img src="/src/images/login.png" alt="login image">
-                            </a>
-                        </div>
-                        <div class="header__login_display">
-                            <a href="/personal_info.html" class="btn_link">login</a>
-                        </div>
-                        <div class="header__bag_mobile ">
-                            <a href="#bag-modal" rel="modal:open">
-                                <img src="/src/images/bag.png" alt="bag image">
-                            </a>
-                            <div class="header-quantity__wrapp">
-                                <p class="header__quantity">2</p>
-                            </div>
-                        </div>
-                        <div class="header__bag_display">
-                            <a href="#bag-modal" class="btn_link" rel="modal:open">bag (0)</a>
-                        </div>
-                        <div class="modal bag-modal" id="bag-modal">
-                            <h4 class="modal__title description__title">
-                                Shopping bag
-                            </h4>
-                            <div class="line modal__line--top"></div>
-                            <div class="bag__item-wrapp">
-                                <img src="/src/images/shop_item1.png" alt="image" class="bag__item-wrapp__image">
-                                <h6 class="bag__item-wrapp__title description__title">
-                                    Photo Name
-                                </h6>
-                                <div class="size-wrapp">
-                                    <h7 class="size-wrapp__title">
-                                        Size:
-                                    </h7>
-                                    <input type="text" class="bag__item-wrapp__size" id="size" value="A3">
-                                </div>
-                                <div class="bag__item-wrapp__counter-wrapp">
-                                    <h7 class="bag__item-wrapp_counter-wrapp__title">Quantity</h7>
-                                    <input type="button" id="buttonCountPlus" value="+" class="counter-plus">
-                                    <p id="buttonCountNumber" class="counter-number">1</p>
-                                    <input type="button" id="buttonCountMinus" value="-" class="couner-minus">
-                                </div>
-                                <button class="bag__item-wrapp__delete-item"></button>
-                                <input type="text" value="$ 200" id="num" name="num" class="counter-value">
-                            </div>
-                            <div class="line modal__line--bottom"></div>
-                            <div class="bag__price-wrapp">
-                                <div class="subtotal-wrapp">
-                                    <h7 class="bag__price-title">Subtotal</h7>
-                                    <input type="text" value="$ 200" name="subtotal" class="bag__price" id="subtotalPrice">
-                                </div>
-                                <div class="delivery--price-wrapp">
-                                    <h7 class="bag__price-title">Delivery</h7>
-                                    <input type="text" value="$ 10" name="delivery" class="bag__price" id="deliverylPrice">
-                                </div>
-                                <div class="line bag__price-line"></div>
-                            </div>
-                            <div class="total--price-wrapp">
-                                <h8 class="total--price-wrapp__title">Total</h8>
-                                <input type="text" value="$ 410" name="total Price" class="total--price-wrapp__price" id="totalPrice">
-                            </div>
-                            <button class="btn">Proceed to checkout</button>
-                        </div>
-                    </div>
-                </header>
-                <section class="shop-section">
-                    <div class="line"></div>
-                    <div class="shop-section__wrapp" id="shop-section">
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item1.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item2.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item3.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item5.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item3.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item5.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item2.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item3.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                            <a href="/about.html" class="shop-section__item">
-                                <img src="/src/images/shop_item1.png" alt="Photo" class="item__photo">
-                                <h2 class="item__title">Product</h2>
-                                <p class="item__price">$200</p>
-                            </a>
-                    </div>
-                    <button class="shop_btn btn">Load More</button>
-                </section>
-                <section class="about-section">
-                    <div class="about-section__wrapp">
-                        <h4 class="big_title about-section__title">About Photographer</h4>
-                        <div class="content-wrapp">
-                            <video src="/src/images/video.MOV" class="video" autoplay loop muted></video>
-                            <div class="content-wrapp--row">
-                                <p class="content__text text--main">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem
-                                </p>
-                                <div class="contacts-wrapp">                            
-                                    <h5 class="title--caps">email:</h5>
-                                    <a href="sunsee@gmail.com" class="email_link text--main">sunsee@gmail.com</a>
-                                </div>
-                                <div class="contacts-wrapp">                            
-                                    <h5 class="title--caps">phone:</h5>
-                                    <p class="text--main">+ 38093 222 22 22</p>
-                                </div>
-                                <div class="contacts-wrapp">                            
-                                    <h5 class="title--caps">social:</h5>
-                                    <a href="https://www.instagram.com/" class="text--main">Instagram</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <footer class="footer">
-                    <div class="footer__wrapp">
-                        <a href="#" class="footer__logo"><img src="/src/images/Logo.png" alt="Sunsee Logo"></a>
-                        <p class="text15"> © All rights reserved — 2021 </p>
-                    </div>
-                </footer>
+      <div class="wrapper">
+        <div class="main_wrapper">
+          <header class="header">
+            <a href="#" class="header__logo"> SUNSEE </a>
+            <div class="header__menu">
+              <select
+                name="language select"
+                id="select_language"
+                class="header__select"
+              >
+                <option value="en" class="select_item">EN</option>
+              </select>
+              <div class="header__login_mobile">
+                <button class="login-open login-open--mobile"></button>
+              </div>
+              <div class="header__login_display">
+                <button class="btn_link login-open">login</button>
+              </div>
+              <div class="header__bag_mobile">
+                <button class="modal-open mobile-open"></button>
+                <div class="header-quantity__wrapp">
+                  <p class="header__quantity">2</p>
+                </div>
+              </div>
+              <div class="header__bag_display">
+                <button class="btn_link modal-open">
+                  bag
+                  <input
+                    type="text"
+                    value="(0)"
+                    class="bag-items--count btn_link"
+                    readonly
+                  />
+                </button>
+              </div>
             </div>
+          </header>
+          <section class="shop-section">
+            <div class="line"></div>
+            <div class="shop-section__wrapp" id="shop-section">
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item1.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item2.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item3.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item5.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item3.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item5.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item2.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item3.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+              <a href="/about.html" class="shop-section__item">
+                <img
+                  src="/src/images/shop_item1.png"
+                  alt="Photo"
+                  class="item__photo"
+                />
+                <h2 class="item__title">Product</h2>
+                <p class="item__price">$200</p>
+              </a>
+            </div>
+            <button class="shop_btn btn">Load More</button>
+          </section>
+          <section class="about-section">
+            <div class="about-section__wrapp">
+              <h4 class="big_title about-section__title">About Photographer</h4>
+              <div class="content-wrapp">
+                <video
+                  src="/src/images/video.MOV"
+                  class="video"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+                <div class="content-wrapp--row">
+                  <p class="content__text text--main">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                    aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                    velit, sed quia non numquam eius modi tempora incidunt ut
+                    labore et dolore magnam aliquam quaerat voluptatem
+                  </p>
+                  <div class="contacts-wrapp">
+                    <h5 class="title--caps">email:</h5>
+                    <a href="sunsee@gmail.com" class="email_link text--main"
+                      >sunsee@gmail.com</a
+                    >
+                  </div>
+                  <div class="contacts-wrapp">
+                    <h5 class="title--caps">phone:</h5>
+                    <p class="text--main">+ 38093 222 22 22</p>
+                  </div>
+                  <div class="contacts-wrapp">
+                    <h5 class="title--caps">social:</h5>
+                    <a href="https://www.instagram.com/" class="text--main"
+                      >Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="footer">
+            <div class="footer__wrapp">
+              <a href="#" class="footer__logo"
+                ><img src="/src/images/Logo.png" alt="Sunsee Logo"
+              /></a>
+              <p class="text15">© All rights reserved — 2021</p>
+            </div>
+          </footer>
         </div>
+      </div>
+      <div class="bag-modal closed">
+        <div class="modal-wrapper">
+          <div class="bag-modal__wrapper">
+            <h4 class="modal__title description__title">Shopping bag</h4>
+            <div class="line modal__line--top"></div>
+            <div class="bag__item-wrapp">
+              <img
+                src="/src/images/shop_item1.png"
+                alt="image"
+                class="bag__item-wrapp__image"
+              />
+              <h6 class="bag__item-wrapp__title description__title">
+                Photo Name
+              </h6>
+              <div class="size-wrapp">
+                <h7 class="size-wrapp__title"> Size: </h7>
+                <input
+                  type="text"
+                  class="bag__item-wrapp__size"
+                  id="size"
+                  value="A3"
+                />
+              </div>
+              <div class="bag__item-wrapp__counter-wrapp">
+                <input type="button" value="-" class="counter-minus" />
+                <input type="text" class="counter-number" value="1" />
+                <input type="button" value="+" class="counter-plus" />
+              </div>
+              <button class="bag__item-wrapp__delete-item"></button>
+              <input
+                type="text"
+                value="$ 200"
+                name="num"
+                class="counter-value"
+              />
+            </div>
+            <div class="bag__item-wrapp">
+              <img
+                src="/src/images/shop_item1.png"
+                alt="image"
+                class="bag__item-wrapp__image"
+              />
+              <h6 class="bag__item-wrapp__title description__title">
+                Photo Name
+              </h6>
+              <div class="size-wrapp">
+                <h7 class="size-wrapp__title"> Size: </h7>
+                <input
+                  type="text"
+                  class="bag__item-wrapp__size"
+                  id="size"
+                  value="A3"
+                />
+              </div>
+              <div class="bag__item-wrapp__counter-wrapp">
+                <input type="button" value="-" class="counter-minus" />
+                <input type="text" class="counter-number" value="1" />
+                <input type="button" value="+" class="counter-plus" />
+              </div>
+              <button class="bag__item-wrapp__delete-item"></button>
+              <input
+                type="text"
+                value="$ 200"
+                name="num"
+                class="counter-value"
+              />
+            </div>
+            <div class="line modal__line--bottom"></div>
+            <div class="price-wrapper">
+              <div class="bag__price-wrapp">
+                <div class="subtotal-wrapp">
+                  <h7 class="bag__price-title">Subtotal</h7>
+                  <input
+                    type="text"
+                    value="$ 200"
+                    name="subtotal"
+                    class="bag__price bag__price--subtotal"
+                  />
+                </div>
+                <div class="delivery--price-wrapp">
+                  <h7 class="bag__price-title">Delivery</h7>
+                  <input
+                    type="text"
+                    value="$ 10"
+                    name="delivery"
+                    class="bag__price bag__price--delivery"
+                  />
+                </div>
+                <div class="line bag__price-line"></div>
+              </div>
+              <div class="total--price-wrapp">
+                <h8 class="total--price-wrapp__title">Total</h8>
+                <input
+                  type="text"
+                  value="$ 410"
+                  name="total Price"
+                  class="bag__price total--price-wrapp__price"
+                />
+              </div>
+            </div>
+            <button class="btn">
+              <a href="/shop.html" class="btn__link">Proceed to checkout</a>
+            </button>
+            <button class="modal-close"></button>
+          </div>
+        </div>
+      </div>
+      <div class="login-modal closed">
+        <div class="login-modal__container">
+          <div class="login-modal__wrapp">
+            <h8 class="login-modal__title description__title">
+              Login
+            </h8>
+            <a href="#" class="privacy-policy__link link">Privacy Policy</a>
+            <div class="login-form__wrapp">
+              <form action="POST" class="login-form">
+                <input type="text" class="login-form__input input" placeholder="Email">
+                <input type="text" class="login-form__input input" placeholder="Password"> 
+              </form>
+              <button class="forgot-password__btn link">
+                Forgot your password?
+              </button>
+            </div>
+            <button class="btn log-in__btn">Log in</button>
+            <p class="text text--main">Don’t have an account yet?</p>
+            <button class="link sign-up__button">Sign Up</button>
+            <div class="line-wrapp text--main">or</div>
+            <div class="another-login">
+              <button class="another-login__btn google-btn">Sign Up with Google+</button>
+              <button class="another-login__btn facebook-btn">Sign Up with Facebook</button>
+            </div>
+            <button class="modal-close login-modal--close"></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="/src/modal.js"></script>
-</body>
+  </body>
 </html>

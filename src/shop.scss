@@ -1,0 +1,177 @@
+@import "./elements.scss";
+
+.checkout-section {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  align-items: flex-start;
+  @include tablet {
+    grid-template-columns: 446px 446px;
+  }
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .text--main {
+    color: $primary-color;
+  }
+  .line {
+    margin: 0;
+  }
+  .price {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133%;
+    letter-spacing: 0.1em;
+    @include tablet {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 133%;
+    }
+  }
+  .price::before {
+    content: "€";
+    padding-right: 4px;
+  }
+  .checkout-title {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 126.4%;
+    @include mobile {
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 126.4%;
+    }
+    @include tablet {
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 126.4%;
+    }
+  }
+  .items-wrapp {
+    width: 300px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    @include mobile {
+      width: 280px;
+    }
+    @include tablet {
+      width: 450px;
+      margin-bottom: 0;
+    }
+    @include desktop {
+      width: 480px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    &--border {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      padding-right: 19px;
+      padding-top: 16px;
+      padding-bottom: 23px;
+      @include tablet {
+        padding-left: 20px;
+        padding-right: 21px;
+      }
+      @include desktop {
+        padding-right: 28px;
+      }
+    }
+    .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 13px;
+      &:last-child {
+        @include tablet {
+          margin-bottom: 49px;
+        }
+        @include desktop {
+          margin-bottom: 15px;
+        }
+      }
+      &-photo {
+        width: 54px;
+        height: 66px;
+        @include tablet {
+          width: 110px;
+          height: 126px;
+        }
+        @include desktop {
+          width: 134px;
+          height: 144px;
+        }
+      }
+      &-name {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 126.4%;
+        @include tablet {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 126.4%;
+        }
+      }
+      &-count {
+        display: none;
+        color: $primary-color;
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+    .top-line {
+      margin-bottom: 8px;
+    }
+    .subtotal-price {
+      width: 163px;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      @include tablet {
+        width: 212px;
+      }
+      .container-name {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+      }
+      .subtotal-container,
+      .total-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bottom-line {
+          margin-bottom: 8px;
+      }
+      .subtotal-container {
+        margin-bottom: 6px;
+        &:last-child {
+          margin-bottom: 10px;
+        }
+        .text--main {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .form-wrapp {
+      .checkout-form {
+          display: grid;
+          grid-template-columns: 100%;
+        &__title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+      }
+  }
+}

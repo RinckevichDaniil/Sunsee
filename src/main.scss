@@ -4,12 +4,15 @@
 @import '/src/elements.scss';
 @import '/src/footer.scss';
 @import '/src/modal.scss';
+@import '/src/login.scss';
 
 
 .wrapp { 
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 .wrapper {
     margin: 0;
